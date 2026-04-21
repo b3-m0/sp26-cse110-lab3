@@ -1,0 +1,38 @@
+name: Advanced CSS Task
+description: Layouts, responsiveness, selectors, and validation
+title: "[CSS Advanced]: "
+labels: ["css", "enhancement"]
+assignees:
+  - octocat
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for advanced CSS features.
+
+  - type: input
+    id: task
+    attributes:
+      label: Task Summary
+      placeholder: ex. Implement flexbox layout
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: advanced
+    attributes:
+      label: Features Implemented
+      options:
+        - label: Flexbox used
+        - label: Grid used
+        - label: Media queries added
+        - label: Responsive design tested
+        - label: Advanced selectors used (:hover, :has, combinators)
+        - label: CSS validated
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      placeholder: Mention any issues or browser compatibility concerns
