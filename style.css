@@ -8,12 +8,13 @@
 }
 
 /* =========================
-   UNIVERSAL RESET
+   UNIVERSAL RESET + UNIVERSAL SELECTOR
 ========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* =========================
@@ -22,7 +23,7 @@
 body {
   background-color: var(--accent-color, orange); /* fallback */
   color: var(--text-color);
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 /* =========================
@@ -39,80 +40,55 @@ p {
 }
 
 /* =========================
-   BOX MODEL
+   BOX MODEL (SECTIONS)
 ========================= */
-
-/* MARGIN (longhand) */
 section {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
-
-  padding-top: 20px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-
-  border-style: solid;
-  border-color: black;
-  border-width: 2px;
+  margin: 10px 20px;          /* shorthand margin */
+  padding: 20px 15px 10px 15px; /* longhand-style padding */
+  border: 2px solid black;
   border-radius: 10px;
+  background-color: lightgray;
 }
 
+/* Next Steps box (div) */
 .next-steps {
   border: 2px solid black;
   padding: 10px;
   margin: 10px 20px;
-  background-color: lightgray;
+  background-color: #f5f5dc;
   border-radius: 10px;
 }
 
-audio {
-  display: block;
-  margin: 0 auto;
-  position: static;
-}
-
-/* MARGIN (shorthand + auto) */
+/* =========================
+   HEADER / FOOTER
+========================= */
 header {
   margin: 20px auto;
+  position: sticky;
+  top: 0;
+  background-color: lemonchiffon;
 }
 
-/* PADDING (longhand) */
-section {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* PADDING (shorthand) */
 footer {
+  text-align: center;
   padding: 10px 20px;
-}
-
-/* BORDER */
-section {
-  border-style: solid;
-  border-color: black;
-  border-width: 2px;
-  border-radius: 10px;
+  position: relative;
+  top: 10px;
 }
 
 /* =========================
    UNITS (absolute + relative)
 ========================= */
 h1 {
-  font-size: 2rem;       /* relative */
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 24px;       /* absolute */
+  font-size: 24px;
 }
 
 img {
-  width: 50%;            /* relative */
+  width: 50%;
   max-width: 300px;
   min-width: 100px;
 }
@@ -126,7 +102,7 @@ nav a {
 }
 
 hr {
-  display: none; /* required example */
+  display: none;
 }
 
 /* =========================
@@ -138,24 +114,11 @@ video {
 }
 
 /* =========================
-   POSITIONING
+   AUDIO CENTERING
 ========================= */
-header {
-  position: sticky;
-  top: 0;
-  background-color: lemonchiffon;
-}
-
-footer {
-  position: relative;
-  top: 10px;
-}
-
-/* =========================
-   BACKGROUND
-========================= */
-section {
-  background-color: lightgray;
+audio {
+  display: block;
+  margin: 0 auto;
 }
 
 /* =========================
@@ -164,8 +127,8 @@ section {
 nav {
   display: flex;
   justify-content: center;
-  gap: 10px;
   align-items: center;
+  gap: 10px;
 }
 
 /* =========================
@@ -198,5 +161,74 @@ a:hover {
 }
 
 a:active {
-  color: blue;
+  color: darkslateblue;
+}
+
+/* =========================
+   SELECTORS (REQUIRED)
+========================= */
+
+/* Class selector */
+.next-steps {
+  background-color: #f5f5dc;
+}
+
+/* ID selector */
+#attendance {
+  background-color: hsl(0, 0%, 83%);
+}
+
+/* Attribute selector */
+a[href^="mailto"] {
+  color: darkgreen;
+  font-weight: bold;
+}
+
+/* Element selector already used above (h1, p, etc.) */
+
+/* Selector list already used above (h1, h2, h3) */
+
+/* Descendant combinator */
+section p {
+  line-height: 1.5;
+}
+
+/* Child combinator */
+form > fieldset {
+  border: 2px solid gray;
+}
+
+/* General sibling combinator */
+h2 ~ ul {
+  background-color: darkgrey;
+}
+
+/* Adjacent sibling combinator */
+h2 + p {
+  font-style: italic;
+}
+
+/* Combining selectors */
+section#attendance {
+  border-left: 5px solid green;
+}
+
+/* =========================
+   :HAS() SELECTOR (REQUIRED)
+========================= */
+section:has(img) {
+  border: 3px solid blue;
+}
+
+/* =========================
+   NESTED SELECTORS (MODERN CSS)
+========================= */
+section {
+  p {
+    color: #333;
+  }
+
+  ul {
+    margin-left: 20px;
+  }
 }
