@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Meeting notes detailing ideas for a new lego set">
     <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
 
     <!-- ADD CSS INTERNAL CODE -->
     <style>
@@ -32,7 +33,16 @@
 
         <nav>
             <a href="#attendance">Attendance</a>
-            <a href="#agenda"></a>
+            <a href="#agenda">Agenda</a>
+            <a href="#unfinished">Unfinished Business</a>
+            <a href="#new">New Business</a>
+            <a href="#misc">Miscellaneous</a>
+            <a href="#img">Image</a>
+            <a href="#audio">Capybara Audio</a>
+            <a href="#vid">Video</a>
+            <a href="#details">Additional Notes</a>
+            <a href="#next">Next Steps</a>
+            <a href="feedback">Feedback Form</a>
         </nav>
     </header>
 
@@ -63,7 +73,7 @@
       <hr>
 
       <!-- Unfinished Business -->
-      <section>
+      <section id="unfinished">
         <h2>Unfinished Business</h2>
         <p>No unfinished business from last meeting.</p>
       </section>
@@ -88,7 +98,7 @@
       <hr>
 
       <!-- Misc -->
-      <section>
+      <section id="misc">
         <h2>Miscellaneous</h2>
         <p>Questions and comments:</p>
         <ul>
@@ -103,13 +113,13 @@
       <hr>
 
       <!-- Image -->
-      <section>
-        <h2>Diagram</h2>
+      <section id="img">
+        <h2>Image</h2>
         <img src="capybara.jpeg" alt="Example of a capybara for reference" width="300">
       </section>
 
       <!-- Audio -->
-      <section>
+      <section id="audio">
         <h2>Capybara Audio</h2>
         <audio controls>
           <source src="capybara.mp3" type="audio/mpeg">
@@ -118,7 +128,7 @@
       </section>
 
       <!-- Video -->
-      <section>
+      <section id="vid">
         <h2>Lights Video</h2>
         <video width="320" height="240" controls>
           <source src="lights.mp4" type="video/mp4">
@@ -127,7 +137,7 @@
       </section>
 
       <!-- Details -->
-      <section>
+      <section id="details">
         <h2>Additional Notes</h2>
         <details>
           <summary>Click to expand notes</summary>
@@ -136,7 +146,7 @@
       </section>
 
       <!-- Div + Span -->
-      <div>
+      <div class="next-steps" id="next">
         <h3>Next Steps</h3>
         <p>
           Build a <span>prototype model</span> and test stability.
@@ -144,7 +154,7 @@
       </div>
 
       <!-- Form -->
-      <section>
+      <section id="feedback">
         <h2>Feedback Form</h2>
 
         <form>
