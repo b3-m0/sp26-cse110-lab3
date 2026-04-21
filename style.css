@@ -223,12 +223,10 @@ section:has(img) {
 /* =========================
    NESTED SELECTORS (MODERN CSS)
 ========================= */
-section {
-  p {
-    color: #333;
-  }
+section p {
+  color: #333;
+}
 
-  ul {
-    margin-left: 20px;
-  }
+section ul {
+  margin-left: 20px;
 }
