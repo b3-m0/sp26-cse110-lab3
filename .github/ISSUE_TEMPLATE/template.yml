@@ -1,3 +1,60 @@
-Title: Create meeting minutes HTML structure
-Labels: ["html", "feature", "triage"]
-Assignees: yourself
+name: Meeting Minutes Task
+description: Create or update meeting minutes features for the lab
+title: "[Meeting Minutes]: "
+labels: ["documentation", "enhancement"]
+assignees:
+  - octocat
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to track tasks related to building the meeting minutes page.
+
+  - type: input
+    id: task-name
+    attributes:
+      label: Task Name
+      description: What is the task you are working on?
+      placeholder: ex. Create meeting minutes HTML structure
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Description
+      description: Describe what needs to be done
+      placeholder: Include steps, requirements, or goals
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Task Category
+      options:
+        - HTML
+        - CSS
+        - Documentation
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Select all that apply
+      options:
+        - label: HTML structure added
+        - label: Required elements included
+        - label: Validated code
+        - label: Ready for pull request
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Anything else to include?
+    validations:
+      required: false
