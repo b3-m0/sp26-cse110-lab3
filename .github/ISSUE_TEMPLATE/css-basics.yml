@@ -1,0 +1,38 @@
+name: CSS Implementation Task
+description: Tasks related to styling and layout
+title: "[CSS]: "
+labels: ["css", "feature"]
+assignees:
+  - octocat
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for CSS styling tasks.
+
+  - type: input
+    id: task
+    attributes:
+      label: Task Summary
+      placeholder: ex. Add external stylesheet and base styles
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: css-checklist
+    attributes:
+      label: CSS Features
+      options:
+        - label: Colors applied
+        - label: Box model used (margin, padding, border)
+        - label: Units applied (relative + absolute)
+        - label: Text styling added
+        - label: Display properties used
+        - label: Positioning applied
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      placeholder: Explain what styles were added
