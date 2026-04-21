@@ -1,0 +1,202 @@
+/* =========================
+   CSS VARIABLES + FALLBACK
+========================= */
+:root {
+  --main-color: rgb(34, 139, 34);
+  --accent-color: tan;
+  --text-color: hsl(0, 0%, 20%);
+}
+
+/* =========================
+   UNIVERSAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY STYLING
+========================= */
+body {
+  background-color: var(--accent-color, orange); /* fallback */
+  color: var(--text-color);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* =========================
+   TEXT STYLING
+========================= */
+h1, h2, h3 {
+  color: color-mix(in srgb, green 60%, black 40%);
+  text-align: center;
+  text-decoration: underline;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* =========================
+   BOX MODEL
+========================= */
+
+/* MARGIN (longhand) */
+section {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+.next-steps {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px 20px;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+audio {
+  display: block;
+  margin: 0 auto;
+  position: static;
+}
+
+/* MARGIN (shorthand + auto) */
+header {
+  margin: 20px auto;
+}
+
+/* PADDING (longhand) */
+section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* PADDING (shorthand) */
+footer {
+  padding: 10px 20px;
+}
+
+/* BORDER */
+section {
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+/* =========================
+   UNITS (absolute + relative)
+========================= */
+h1 {
+  font-size: 2rem;       /* relative */
+}
+
+h2 {
+  font-size: 24px;       /* absolute */
+}
+
+img {
+  width: 50%;            /* relative */
+  max-width: 300px;
+  min-width: 100px;
+}
+
+/* =========================
+   DISPLAY
+========================= */
+nav a {
+  display: inline-block;
+  margin: 5px;
+}
+
+hr {
+  display: none; /* required example */
+}
+
+/* =========================
+   SIZING
+========================= */
+video {
+  width: 300px;
+  height: auto;
+}
+
+/* =========================
+   POSITIONING
+========================= */
+header {
+  position: sticky;
+  top: 0;
+  background-color: lemonchiffon;
+}
+
+footer {
+  position: relative;
+  top: 10px;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+section {
+  background-color: lightgray;
+}
+
+/* =========================
+   FLEXBOX
+========================= */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+/* =========================
+   GRID
+========================= */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* =========================
+   RESPONSIVENESS
+========================= */
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   PSEUDO-CLASSES
+========================= */
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: blue;
+}
